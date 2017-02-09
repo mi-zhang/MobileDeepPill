@@ -24,13 +24,14 @@ def evaluate_network_slim():
     gray_feature = tf.nn.l2_normalize(gray_feature, dim=1, epsilon=1e-12, name="gray_fea")
     gradient_feature = tf.nn.l2_normalize(gradient_feature, dim=1, epsilon=1e-12, name="gradient_fea")
 
+
     return ["color_fea","gray_fea","gradient_fea"]
 
 def create_network_slim(inputs, re_u=False, is_training=True, scope_name='color'):
     with tf.variable_scope(scope_name, regularizer=tf.nn.l2_loss):
         with slim.arg_scope([slim.convolution2d, slim.fully_connected],
                             activation_fn=tf.nn.relu,
-                            weights_initializer=tf.truncated_normal_initializer(stddev=0.01),
+                            weights_initializer=tf.constant_initializer(0),
                             reuse=re_u):
             conv_1 = slim.convolution2d(inputs, 96, kernel_size=11, stride=4, padding='VALID', scope='conv1')
             conv_1_pool = slim.max_pool2d(conv_1, kernel_size=3, stride=2, scope='pool1')
