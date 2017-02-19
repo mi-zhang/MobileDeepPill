@@ -1,0 +1,1 @@
+include ':app', ':Tensorflow-Android-Inference-alpha-debug', ':opencv32-adnroid-release'
