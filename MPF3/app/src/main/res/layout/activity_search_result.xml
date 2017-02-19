@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="msu.ece.xiaozeng.mpf3.SearchResultActivity"
+>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_return_pills"
+        android:background="#165b26"
+        />
+
+</RelativeLayout>

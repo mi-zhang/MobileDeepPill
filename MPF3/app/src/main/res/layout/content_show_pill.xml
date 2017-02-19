@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="msu.ece.xiaozeng.mpf3.ShowPillActivity"
+    tools:showIn="@layout/activity_show_pill">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/image_part">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sb_10_942b4a7a"
+                android:id="@+id/iv_pill_front_pic"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sb_12_c029e06f"
+                android:id="@+id/iv_pill_back_pic"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_part"
+            android:layout_margin="10dp"
+            android:background="@drawable/pill_detail_background">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+>
+
+                <TextView
+                android:text="Pill Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold" android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:text="Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:id="@+id/tv_pill_name"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="25dp"
+                    />
+
+
+                <TextView
+                    android:text="Pill Color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:text="Color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:id="@+id/tv_pill_color"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="25dp"/>
+
+                <TextView
+                    android:text="Pill Imprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:text="Imprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:id="@+id/tv_pill_imprint"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="25dp"/>
+
+
+
+                <TextView
+                    android:text="Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:text="@string/pill_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:id="@+id/tv_pill_color"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
